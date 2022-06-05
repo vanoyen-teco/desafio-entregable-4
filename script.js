@@ -16,7 +16,7 @@ async function getCountryCode() {
         redirect: 'follow'
     }
     try {
-        await fetch(`http://api.ipstack.com/check?access_key=${API_KEY}`, requestOptions)
+        await fetch(`https://api.ipstack.com/check?access_key=${API_KEY}`, requestOptions)
         .then(response => response.json())
         .then(result => {
             const {country_code} = result;
